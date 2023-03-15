@@ -39,6 +39,10 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "from_instruction"
+        },
+        {
+          "type": "SYMBOL",
           "name": "run_instruction"
         }
       ]
@@ -54,6 +58,24 @@
           },
           "named": false,
           "value": "RUN"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "arguments"
+        }
+      ]
+    },
+    "from_instruction": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "PATTERN",
+            "value": "[fF][rR][oO][mM]"
+          },
+          "named": false,
+          "value": "FROM"
         },
         {
           "type": "SYMBOL",
