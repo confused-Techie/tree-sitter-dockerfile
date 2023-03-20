@@ -1,0 +1,99 @@
+======
+From Instruction
+======
+
+FROM busybox
+
+------
+
+(source_file
+  (instruction
+    (from_instruction
+      (from_image))))
+
+======
+From with Tag
+======
+
+FROM busybox:v1.0.0
+
+------
+
+(source_file
+  (instruction
+    (from_instruction
+      (from_image)
+      (from_image_tag))))
+
+======
+From with Digest
+======
+
+FROM busybox@abcd
+
+------
+
+(source_file
+  (instruction
+    (from_instruction
+      (from_image)
+      (from_image_digest))))
+
+======
+From with Name
+======
+
+FROM busbox AS named
+
+------
+
+(source_file
+  (instruction
+    (from_instruction
+      (from_image)
+      (from_image_name))))
+
+======
+From with Name and Tag
+======
+
+FROM busybox:v1.0.0 AS named
+
+------
+
+(source_file
+  (instruction
+    (from_instruction
+      (from_image)
+      (from_image_tag)
+      (from_image_name))))
+
+======
+From with Name and Digest
+======
+
+FROM busybox@abcd AS named
+
+------
+
+(source_file
+  (instruction
+    (from_instruction
+      (from_image)
+      (from_image_digest)
+      (from_image_name))))
+
+======
+From with Platform
+======
+
+FROM --platform=nodejs busybox
+
+------
+
+(source_file
+  (instruction
+    (from_instruction
+      (from_platform_declaration)
+      (from_platform_value)
+      (from_image))))
