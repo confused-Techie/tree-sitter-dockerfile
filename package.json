@@ -9,8 +9,8 @@
     "parse:test": "tree-sitter parse Dockerfile"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "confused-Techie",
+  "license": "MIT",
   "dependencies": {
     "nan": "^2.17.0"
   },
